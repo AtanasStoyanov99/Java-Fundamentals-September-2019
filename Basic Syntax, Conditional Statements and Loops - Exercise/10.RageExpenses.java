@@ -34,3 +34,4 @@ public class RageExpenses {
         System.out.printf("Rage expenses: %.2f lv.", rageSum);
     }
 }
+

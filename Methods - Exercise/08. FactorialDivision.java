@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class FactotialDivision {
+public class FactorialDivision {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int firstNum = Integer.parseInt(scanner.nextLine());
@@ -10,23 +10,16 @@ public class FactotialDivision {
         double result = factorialDivide(firstNum, secondNum);
         System.out.printf("%.2f", result);
     }
-    static int firstNumFact(int n){
-        int factorial = 1;
+    static int factorial(int n){
+        int fact = 1;
         for (int i = n; i >= 1 ; i--) {
-            factorial *= i;
+            fact *= i;
         }
-        return factorial;
-    }
-    static int secondNumFact(int n){
-        int factorial = 1;
-        for (int i = n; i >= 1 ; i--) {
-            factorial *= i;
-        }
-        return factorial;
+        return fact;
     }
     static double factorialDivide(int n1, int n2){
-        double firstFact =  firstNumFact(n1);
-        double secondFact = secondNumFact(n2);
+        double firstFact =  factorial(n1);
+        double secondFact = factorial(n2);
         return firstFact / secondFact;
     }
 }
